@@ -1,6 +1,6 @@
 
 import Table from 'react-bootstrap/Table'
-
+import './style.css';
 const CardsDetails = () => {
     return (
         <>
