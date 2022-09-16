@@ -1,11 +1,13 @@
 import React,{useState} from "react";
-import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
+import {Container, Nav, Navbar, NavLink } from "react-bootstrap";
+import { useSelector } from 'react-redux';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Badge from "@mui/material/Badge";
 import Menu from '@mui/material/Menu';
 
 const Header = () => {
-
+  const getdata = useSelector(((state)=> state.cartreducer.carts));
+  console.log(getdata)
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
